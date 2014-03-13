@@ -1,0 +1,6 @@
+[submodule "pyCloudSim"]
+	path = pyCloudSim
+	url = git@github.com:vonpupp/pyCloudSim.git
+[submodule "planetlab-workload-traces"]
+	path = planetlab-workload-traces
+	url = git@github.com:vonpupp/planetlab-workload-traces.git
