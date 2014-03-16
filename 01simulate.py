@@ -19,7 +19,7 @@
 2014 SBRC Simulations
 """
 __version__ = "0.1"
-__author__  = "Albert De La Fuente"
+__author__ = "Albert De La Fuente"
 
 
 import argparse
@@ -33,9 +33,10 @@ def get_default_arg(default_value, arg):
         return arg
 
 if __name__ == "__main__":
-    seu = 1
-    sksp = 1
-    sec = 1
+    seu = 0
+    sksp = 0
+    sec = 0
+    seccpu = 1
 
     eu_params = ''
     ksp_params = ''
@@ -46,6 +47,8 @@ if __name__ == "__main__":
         ksp_params = '-sksp 1'
     if sec == 1:
         ec_params = '-sec 1'
+    if seccpu == 1:
+        ec_params = '-seccpu 1'
 
     #trace_scenarios = [
     #    'planetlab-workload-traces/20110409/146-179_surfsnel_dsl_internl_net_root',
@@ -69,7 +72,7 @@ if __name__ == "__main__":
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname + '/' + 'pyCloudSim')
-    
+
     # Start the simulation
     for trace in trace_scenarios:
         for host in host_scenarios:
