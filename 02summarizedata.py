@@ -1,26 +1,5 @@
 #!/usr/bin/python
 # vim:ts=4:sts=4:sw=4:et:wrap:ai:fileencoding=utf-8:
-#
-# Copyright 2013 Albert De La Fuente
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-"""
-SummarizeData :: Data summarizer
-"""
-__version__ = "0.1"
-__author__  = "Albert De La Fuente"
-
 
 # Add relative path for other imports
 import sys
@@ -62,31 +41,6 @@ if __name__ == "__main__":
 
     indir = get_default_arg('results', args.indir)
     outdir = get_default_arg('results', args.outdir)
-
-    #trace_scenarios = [
-    #    '146-179_surfsnel_dsl_internl_net_root',
-    #    'host4-plb_loria_fr_uw_oneswarm',
-    #    'plgmu4_ite_gmu_edu_rnp_dcc_ufjf',
-    #
-    #    'planetlab1_fct_ualg_pt_root',
-    #    'host3-plb_loria_fr_inria_omftest',
-    #    'planetlab1_georgetown_edu_nus_proxaudio',
-    #
-    #    'planetlab1_dojima_wide_ad_jp_princeton_contdist',
-    #    'planetlab-20110409-filtered_planetlab1_s3_kth_se_sics_peerialism',
-    #    'planetlab-wifi-01_ipv6_lip6_fr_inria_omftest'
-    #]
-    #algorithm_scenarios = [
-    #    'EnergyUnawareStrategyPlacement',
-    #    'OpenOptStrategyPlacement',
-    #    'EvolutionaryComputationStrategyPlacement'
-    #]
-    ## Setup the scenarios
-    #host_scenarios = range(10, 110, 10)
-    #simulation_scenarios = range(1, 31)
-
-    #host_scenarios = range(200, 210, 10)
-    #simulation_scenarios = range(1, 31)
 
     # Get only the filenames (remove prepending paths)
     trace_scenarios = map(lambda trace: trace.split('/')[-1], trace_scenarios)
