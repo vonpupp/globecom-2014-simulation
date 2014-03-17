@@ -1,7 +1,8 @@
 # These variables are used within both scripts with relative paths references!
 
 trace_scenarios = [
-    '../planetlab-workload-traces/20110409/146-179_surfsnel_dsl_internl_net_root',
+    'hybrid1'
+#    '../planetlab-workload-traces/20110409/146-179_surfsnel_dsl_internl_net_root',
 #    '../planetlab-workload-traces/20110409/host4-plb_loria_fr_uw_oneswarm',
 #    '../planetlab-workload-traces/20110420/plgmu4_ite_gmu_edu_rnp_dcc_ufjf',
 
@@ -24,7 +25,8 @@ algorithm_scenarios = [
 
 # Setup the scenarios
 host_scenarios = range(100, 110, 10)
-simulation_scenarios = range(1, 31)
+#simulation_scenarios = range(1, 31)
+simulation_scenarios = range(1, 3)
 
 #host_scenarios = range(10, 20, 10)
 #simulation_scenarios = [1]#range(1, 2)

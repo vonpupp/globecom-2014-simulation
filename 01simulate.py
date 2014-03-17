@@ -33,10 +33,10 @@ def get_default_arg(default_value, arg):
         return arg
 
 if __name__ == "__main__":
-    seu = 0
-    sksp = 0
-    sec = 0
-    seccpu = 0
+    seu = 1
+    sksp = 1
+    sec = 1
+    seccpu = 1
     skspmem = 1
 
     params = ''
