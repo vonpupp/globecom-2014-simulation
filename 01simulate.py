@@ -41,15 +41,15 @@ if __name__ == "__main__":
 
     params = ''
     if seu == 1:
-        params = '-seu 1 '
+        params += '-seu 1 '
     if sksp == 1:
-        params = '-sksp 1 '
+        params += '-sksp 1 '
     if sec == 1:
-        params = '-sec 1 '
+        params += '-sec 1 '
     if seccpu == 1:
-        params = '-seccpu 1 '
+        params += '-seccpu 1 '
     if skspmem == 1:
-        params = '-skspmem 1 '
+        params += '-skspmem 1 '
 
     # Change current directory
     abspath = os.path.abspath(__file__)
