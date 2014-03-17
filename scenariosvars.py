@@ -1,6 +1,7 @@
 # These variables are used within both scripts with relative paths references!
 
 trace_scenarios = [
+    'hybrid1',
     'hybrid2',
     'hybrid3',
     'hybrid4',
@@ -31,7 +32,7 @@ algorithm_scenarios = [
 # Setup the scenarios
 host_scenarios = range(100, 110, 10)
 #simulation_scenarios = range(1, 31)
-simulation_scenarios = range(1, 3)
+simulation_scenarios = range(1, 2)
 
 #host_scenarios = range(10, 20, 10)
 #simulation_scenarios = [1]#range(1, 2)
