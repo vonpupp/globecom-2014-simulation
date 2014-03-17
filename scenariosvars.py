@@ -1,7 +1,12 @@
 # These variables are used within both scripts with relative paths references!
 
 trace_scenarios = [
-    'hybrid1'
+    'hybrid2',
+    'hybrid3',
+    'hybrid4',
+    'hybrid5',
+    'hybrid6',
+    'hybrid7',
 #    '../planetlab-workload-traces/20110409/146-179_surfsnel_dsl_internl_net_root',
 #    '../planetlab-workload-traces/20110409/host4-plb_loria_fr_uw_oneswarm',
 #    '../planetlab-workload-traces/20110420/plgmu4_ite_gmu_edu_rnp_dcc_ufjf',
