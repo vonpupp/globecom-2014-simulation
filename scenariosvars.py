@@ -17,7 +17,9 @@ trace_scenarios = [
 algorithm_scenarios = [
     'EnergyUnawareStrategyPlacement',
     'OpenOptStrategyPlacement',
-    'EvolutionaryComputationStrategyPlacement'
+    'EvolutionaryComputationStrategyPlacement',
+    'OpenOptStrategyPlacementMem',
+    'EvolutionaryComputationStrategyPlacementCPU',
 ]
 
 # Setup the scenarios

@@ -20,14 +20,6 @@ def get_default_arg(default_value, arg):
         return default_value
     else:
         return arg
-
-#def summarize_file(fname):
-#
-#    #/home/afu/2013-sbrc-experiments.results
-#    s = sd.SummarizeData('/home/afu/2013-sbrc-experiments/results')
-#    best, worst, average = s.load_pm_scenario(fname)
-#    s.csv_write()
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='A VM distribution/placement simulator.')
     parser.add_argument('-i', '--indir', help='Input directory', required=False)
