@@ -38,17 +38,30 @@ if __name__ == "__main__":
     trace_scenarios = map(lambda trace: trace.split('/')[-1], trace_scenarios)
 
     p = plot.GraphGenerator(indir)
+    pgg = plot.PlacementGraphGenerator(indir)
 
     for trace in trace_scenarios:
         for host in host_scenarios:
-            per_algoritm_summary = {}
-            for algorithm in algorithm_scenarios:
-                fname = 'simulation-' + trace + '-' + algorithm + '-' + str(host).zfill(3)
-                print('processing {}...'.format(fname))
-                d = sd.SummarizeData(indir)
+            per_algorithm_summary = {}
+            per_algorithm_placement = {}
+#            for algorithm in algorithm_scenarios:
+#                fname = 'simulation-' + trace + '-' + algorithm + '-' + str(host).zfill(3)
+#                print('processing {}...'.format(fname))
+#                d = sd.SummarizeData(indir)
+#
+#                d.load_pm_scenario(fname)
+#                per_algorithm_summary[algorithm] = d
+#                d.csv_write()
+#
+#            p.set_data(per_algorithm_summary)
+#            p.plot_all_algorithm_comparison(host, trace)
 
-                d.load_pm_scenario(fname)
-                per_algoritm_summary[algorithm] = d
-                d.csv_write()
-            p.set_data(per_algoritm_summary)
-            p.plot_all_algorithm_comparison(host, trace)
+            for vms in range(vms_start, vms_stop, vms_step):
+                for algorithm in algorithm_scenarios:
+                    fname = 'summarized-placement-' + trace + '-' + algorithm + '-' + str(host).zfill(3) + '-' + str(vms).zfill(3)
+                    print('processing {}...'.format(fname))
+                    d = sd.SummarizePlacementData(indir)
+                    d.load_placement(fname)
+                    per_algorithm_placement[algorithm] = d
+                pgg.set_data(per_algorithm_placement)
+                pgg.plot_all_algorithm_comparison(trace, host)

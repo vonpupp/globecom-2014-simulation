@@ -33,23 +33,29 @@ def get_default_arg(default_value, arg):
         return arg
 
 if __name__ == "__main__":
-    seu = 1
-    sksp = 1
+    seu = 0
+    sksp = 0
+    skspmem = 0
+    skspnetgraph = 0
     sec = 1
     seccpu = 1
-    skspmem = 1
+    secnetgraph = 0
 
     params = ''
     if seu == 1:
         params += '-seu 1 '
     if sksp == 1:
         params += '-sksp 1 '
+    if skspmem == 1:
+        params += '-skspmem 1 '
+    if skspnetgraph == 1:
+        params += '-skspnetgraph 1 '
     if sec == 1:
         params += '-sec 1 '
     if seccpu == 1:
         params += '-seccpu 1 '
-    if skspmem == 1:
-        params += '-skspmem 1 '
+    if secnetgraph == 1:
+        params += '-secnetgraph 1 '
 
     # Change current directory
     abspath = os.path.abspath(__file__)
@@ -60,8 +66,9 @@ if __name__ == "__main__":
     for trace in trace_scenarios:
         for host in host_scenarios:
             for simulation in simulation_scenarios:
-                command = 'python distsim.py -t {} -o {} -pm {} -vma 16 -vmo 304 -vme 16 {}'\
-                        .format(trace, dname + 'results', host, params)
+#                command = './distsim.py -t {} -o {} -pm {} -vma 16 -vmo 304 -vme 16 {}'\
+                command = './distsim.py -t {} -o {} -pm {} -vma {} -vmo {} -vme {} {}'\
+                        .format(trace, dname + 'results', host, vms_start, vms_stop, vms_step, params)
                 os.system(command)
 
     print('done')
