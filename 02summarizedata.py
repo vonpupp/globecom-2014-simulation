@@ -13,6 +13,7 @@ from scenariosvars import *
 import argparse
 import os
 from operator import methodcaller
+from collections import defaultdict
 
 
 def get_default_arg(default_value, arg):
@@ -40,10 +41,15 @@ if __name__ == "__main__":
     p = plot.GraphGenerator(indir)
     pgg = plot.PlacementGraphGenerator(indir)
 
+    per_algorithm_placement = defaultdict(
+        lambda: defaultdict(
+            lambda: defaultdict(
+                lambda: defaultdict(dict)
+            )
+        ))
     for trace in trace_scenarios:
         for host in host_scenarios:
-            per_algorithm_summary = {}
-            per_algorithm_placement = {}
+#            per_algorithm_summary = {}
 #            for algorithm in algorithm_scenarios:
 #                fname = 'simulation-' + trace + '-' + algorithm + '-' + str(host).zfill(3)
 #                print('processing {}...'.format(fname))
@@ -62,6 +68,7 @@ if __name__ == "__main__":
                     print('processing {}...'.format(fname))
                     d = sd.SummarizePlacementData(indir)
                     d.load_placement(fname)
-                    per_algorithm_placement[algorithm] = d
-                pgg.set_data(per_algorithm_placement)
-                pgg.plot_all_algorithm_comparison(trace, host)
+                    per_algorithm_placement[host][vms][algorithm][trace] = d
+#                    per_algorithm_placement[vms][algorithm][trace][host] = d
+    pgg.set_data(per_algorithm_placement)
+    pgg.plot_all_algorithm_comparison(algorithm_scenarios, trace_scenarios, host, vms_stop - vms_step)
