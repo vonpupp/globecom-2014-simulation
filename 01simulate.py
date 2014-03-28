@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # vim:ts=4:sts=4:sw=4:et:wrap:ai:fileencoding=utf-8:
 #
-# Copyright 2014 Albert P. M. De La Fuente Vigliotti
+# Copyright 2013-2014 Albert De La Fuente Vigliotti
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,12 +33,12 @@ def get_default_arg(default_value, arg):
         return arg
 
 if __name__ == "__main__":
-    seu = 0
-    sksp = 0
-    skspmem = 0
-    skspnetgraph = 0
+    seu = 1
+    sksp = 1
+    skspmem = 1
     sec = 1
     seccpu = 1
+    skspnetgraph = 0
     secnetgraph = 0
 
     params = ''
@@ -66,8 +66,7 @@ if __name__ == "__main__":
     for trace in trace_scenarios:
         for host in host_scenarios:
             for simulation in simulation_scenarios:
-#                command = './distsim.py -t {} -o {} -pm {} -vma 16 -vmo 304 -vme 16 {}'\
-                command = './distsim.py -t {} -o {} -pm {} -vma {} -vmo {} -vme {} {}'\
+                command = './pycloudsim.py -t {} -o {} -pm {} -vma {} -vmo {} -vme {} {}'\
                         .format(trace, dname + 'results', host, vms_start, vms_stop, vms_step, params)
                 os.system(command)
 

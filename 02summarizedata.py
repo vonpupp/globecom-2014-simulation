@@ -6,9 +6,9 @@ import sys
 sys.path.append("pyCloudSim")
 
 #from distsim.model.tracefilter import TraceFilter
-import distsim.analysis.summarizedata as sd
-import distsim.analysis.csvloader as csvl
-import distsim.analysis.plotdata as plot
+import pycloudsim.analysis.summarizedata as sd
+import pycloudsim.analysis.csvloader as csvl
+import pycloudsim.analysis.plotdata as plot
 from scenariosvars import *
 import argparse
 import os
@@ -49,18 +49,18 @@ if __name__ == "__main__":
         ))
     for trace in trace_scenarios:
         for host in host_scenarios:
-#            per_algorithm_summary = {}
-#            for algorithm in algorithm_scenarios:
-#                fname = 'simulation-' + trace + '-' + algorithm + '-' + str(host).zfill(3)
-#                print('processing {}...'.format(fname))
-#                d = sd.SummarizeData(indir)
-#
-#                d.load_pm_scenario(fname)
-#                per_algorithm_summary[algorithm] = d
-#                d.csv_write()
-#
-#            p.set_data(per_algorithm_summary)
-#            p.plot_all_algorithm_comparison(host, trace)
+            per_algorithm_summary = {}
+            for algorithm in algorithm_scenarios:
+                fname = 'simulation-' + trace + '-' + algorithm + '-' + str(host).zfill(3)
+                print('processing {}...'.format(fname))
+                d = sd.SummarizeData(indir)
+
+                d.load_pm_scenario(fname)
+                per_algorithm_summary[algorithm] = d
+                d.csv_write()
+
+            p.set_data(per_algorithm_summary)
+            p.plot_all_algorithm_comparison(host, trace)
 
             for vms in range(vms_start, vms_stop, vms_step):
                 for algorithm in algorithm_scenarios:
