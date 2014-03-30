@@ -33,11 +33,11 @@ def get_default_arg(default_value, arg):
         return arg
 
 if __name__ == "__main__":
-    seu = 1
-    sksp = 1
-    skspmem = 1
+    seu = 0
+    sksp = 0
+    skspmem = 0
     sec = 1
-    seccpu = 1
+    secnet = 1
     skspnetgraph = 0
     secnetgraph = 0
 
@@ -52,8 +52,8 @@ if __name__ == "__main__":
         params += '-skspnetgraph 1 '
     if sec == 1:
         params += '-sec 1 '
-    if seccpu == 1:
-        params += '-seccpu 1 '
+    if secnet == 1:
+        params += '-secnet 1 '
     if secnetgraph == 1:
         params += '-secnetgraph 1 '
 

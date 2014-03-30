@@ -1,3 +1,27 @@
+#!/usr/bin/python
+# vim:ts=4:sts=4:sw=4:et:wrap:ai:fileencoding=utf-8:
+#
+# Copyright 2013-2014 Albert De La Fuente Vigliotti
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+"""
+2014 Globecom Simulations
+"""
+__version__ = "0.2"
+__author__ = "Albert De La Fuente Vigliotti"
+
+
 # These variables are used within both scripts with relative paths references!
 
 trace_scenarios = [
@@ -30,9 +54,9 @@ algorithm_scenarios = [
 ]
 
 # Setup the scenarios
-host_scenarios = range(10, 110, 10)
+host_scenarios = range(100, 110, 10)
 simulation_scenarios = range(1, 31)
 #simulation_scenarios = range(1, 2)
 vms_start = 16
-vms_stop = 288
+vms_stop = 304
 vms_step = 16
