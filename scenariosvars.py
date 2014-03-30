@@ -50,13 +50,18 @@ algorithm_scenarios = [
     'OpenOptStrategyPlacement',
     'EvolutionaryComputationStrategyPlacement',
     'OpenOptStrategyPlacementMem',
-    'EvolutionaryComputationStrategyPlacementCPU',
+    'EvolutionaryComputationStrategyPlacementNet',
 ]
 
 # Setup the scenarios
 host_scenarios = range(100, 110, 10)
 simulation_scenarios = range(1, 31)
-#simulation_scenarios = range(1, 2)
 vms_start = 16
 vms_stop = 304
 vms_step = 16
+
+#host_scenarios = range(10, 20, 10)
+#simulation_scenarios = range(1, 2)
+#vms_start = 16
+#vms_stop = 32
+#vms_step = 16

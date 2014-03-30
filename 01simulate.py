@@ -33,9 +33,9 @@ def get_default_arg(default_value, arg):
         return arg
 
 if __name__ == "__main__":
-    seu = 0
-    sksp = 0
-    skspmem = 0
+    seu = 1
+    sksp = 1
+    skspmem = 1
     sec = 1
     secnet = 1
     skspnetgraph = 0
