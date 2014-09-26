@@ -66,7 +66,7 @@ if __name__ == "__main__":
     for trace in trace_scenarios:
         for host in host_scenarios:
             for simulation in simulation_scenarios:
-                command = './pycloudsim.py -t {} -o {} -pm {} -vma {} -vmo {} -vme {} {}'\
+                command = 'python pycloudsim.py -t {} -o {} -pm {} -vma {} -vmo {} -vme {} {}'\
                         .format(trace, dname + 'results', host, vms_start, vms_stop, vms_step, params)
                 os.system(command)
 
