@@ -1,4 +1,0 @@
-FuncDesigner==0.5201
-#cvxopt==1.1.6
-inspyred==1.0
-openopt==0.5115
