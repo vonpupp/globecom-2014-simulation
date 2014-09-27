@@ -30,15 +30,15 @@ vagrant ssh
 
 ```shell
 # To install the base packages run:
-wget --no-check-certificate https://raw.githubusercontent.com/vonpupp/sbrc-2014-simulation/master/setup/arch-setup.sh -O - | sh
+wget --no-check-certificate https://raw.githubusercontent.com/vonpupp/globecom-2014-simulation/master/setup/arch-setup.sh -O - | sh
 ```
 
 ### Clone the repository
 
 ```shell
 # First, clone the repository and initialize the submodules:
-git clone https://github.com/vonpupp/sbrc-2014-simulation.git
-cd sbrc-2014-simulation
+git clone https://github.com/vonpupp/globecom-2014-simulation.git
+cd globecom-2014-simulation
 ./00submodules.sh
 
 # Then execute the experiments (Note that you can customize the ``scenariosvar.py`` to change the simulation parameters):
